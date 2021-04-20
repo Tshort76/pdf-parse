@@ -1,0 +1,16 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.9.0"}
+        org.apache.pdfbox/pdfbox {:mvn/version "2.0.3"}
+        org.bouncycastle/bcmail-jdk15 {:mvn/version "1.46"}
+        org.bouncycastle/bcprov-jdk15 {:mvn/version "1.46"}
+        prismatic/plumbing {:mvn/version "0.5.5"}
+        environ/environ {:mvn/version "1.2.0"}
+        com.taoensso/timbre {:mvn/version "4.10.0"}
+        compojure/compojure    {:mvn/version "1.6.2"}
+        http-kit/http-kit {:mvn/version "2.5.1"}
+        ring/ring-defaults {:mvn/version "0.3.2"}
+        metosin/ring-swagger {:mvn/version "0.26.2"}
+        org.clojure/data.json {:mvn/version "2.2.1"}}
+ :aliases
+ {:test {:extra-paths ["test"]
+         :extra-deps {org.clojure/test.check {:mvn/version "1.0.0"}}}}}

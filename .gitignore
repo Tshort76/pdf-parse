@@ -1,0 +1,8 @@
+**/.DS_Store
+.calva
+.nrepl-port
+.lein-env
+target
+.lsp
+.cpcache
+.clj-kondo

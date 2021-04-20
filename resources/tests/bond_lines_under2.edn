@@ -1,0 +1,1 @@
+{:tables [{:type :table, :vals [["Maturity August 1" "Principal Amount" "Interest Rate" "Yield" "CUSIP *"] ["2024" "$25,000,000" "6.00%" "4.67% †" "745291UV4"] ["2025" "25,000,000" "6.00" "4.82 †" "745291UW2"] ["2026" "24,985,000" "6.00" "4.93 †" "745291UX0"]], :y0 189, :y1 248, :x0 104, :x1 524, :page-number 1}]}
