@@ -92,15 +92,12 @@
           (map (comp (partial apply merge) second))
           (sort-by :page-number)))))
 
-(defn- block-transforms [pdf-path {:keys [page-bounds] :as opts}]
-  (->> (pages-of-words pdf-path page-bounds)
-       (mapcat #(parse-page % opts))))
 
 (defn transform
   "Transforms pages in the range [(first page-bounds) , (last page-bounds))
    of the input pdf (input as a url string or File object) into the desired output format.
    Supported formats include tokens, segments, blocks, plain-text, pages-of-lines, and components (default)."
-  [pdf-path & [{:keys [page-bounds format] :as opts}]]
+  [pdf-path & [{:keys [page-bounds format]}]]
   (case (keyword format)
     :plain-text (pdf->text pdf-path page-bounds)
     :pages-of-lines (pdf->pages-of-lines pdf-path page-bounds)

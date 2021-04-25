@@ -1,9 +1,9 @@
 # Pdf-parse
-Pdf-parse is a Clojure library for transforming PDF documents into data structures which are more amenable to machine processing. 
-It accomplishes this through the use of exceedingly clever (just don't consult the source code on this one) heuristics to detect and leverage 
+Pdf-parse is a Clojure library for transforming PDF documents into more responsible and considerate data formats. 
+It accomplishes this through the use of heuristics to detect and leverage 
 important visual features of a document (e.g. whitespace columns & font changes) in order to detect and parse components such as tables and paragraphs.
 
-pdf-parse uses the following data processing pipeline:
+Pdf-parse uses the following data processing pipeline:
  * Call Apache's PDFBox library to obtain the raw data of the pdf (i.e. TextPositions, bookmarks, and drawn lines).
  * Compose word tokens from the raw data.
  * Compose blocks by grouping word tokens according to implicit document boundaries (e.g. whitespace)
@@ -13,6 +13,7 @@ pdf-parse uses the following data processing pipeline:
 
 ## Usage
 
+### Library
 To install, add the following to your project :dependencies :
 
     [pdf-parse "0.1.0"]
@@ -21,6 +22,9 @@ Require the pdf-parse.core in your namespace:
 
     (ns my.ns 
         (:require [pdf-parse.core :as pdft]))
+
+### Local webservice
+`clj -X pdf-parse.app/-main` will start the service running on port 3000 of local host.
 
 ### Examples
 
